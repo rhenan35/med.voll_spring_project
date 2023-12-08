@@ -1,0 +1,14 @@
+version: '1'
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_USER: dbusermedvoll
+      MYSQL_PASSWORD: senhaforte
+      MYSQL_DATABASE: database
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - "3306:3306"
+    volumes:
+      - /var/lib/mysql
